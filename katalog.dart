@@ -56,8 +56,6 @@ class Katalog extends Queue{
 
   }
 
-  // void deleteFilm(){}
-
   void sortFilmByName(){
     
     for (int i = this.list.length - 1; i >= 0; i--) {
@@ -201,30 +199,6 @@ class Katalog extends Queue{
       n++;
     }
     print("+------+------------------------------------+----------------+-------+------------+--------------------------+--------+");
-  }
-
-  void searchFilm(String judulfilm){
-
-    int n = 1;
-    String nomer = n.toString();
-    print("+------+------------------------------------+----------------+-------+------------+--------------------------+--------+");
-    print("| No   | Judul                              | Genre          | Tahun | Negara     | Sutradara                | Durasi |");
-    print("+------+------------------------------------+----------------+-------+------------+--------------------------+--------+");
-    for(int i = 0; i < this.list.length; i++){
-      int judul = this.list[i]['judul'].length;
-      int genre = this.list[i]['genre'].length;
-      int negara = this.list[i]['negara'].length;
-      int sutradara = this.list[i]['sutradara'].length;
-      int durasi = this.list[i]['durasi'].length;
-      int no = nomer.length;
-
-      if (this.list[i]['negara'] == judulfilm){
-        print("| $n" + ( " " * (5 - no)) + "| ${this.list[i]['judul']}" + ( " " * (35 - judul ))+"| ${this.list[i]['genre']}" + (" " * (15 - genre)) + "| ${this.list[i]['tahun']}  | ${this.list[i]['negara']}" + (" " * (11 - negara)) + "| ${this.list[i]['sutradara']}" + (" " * (25 - sutradara)) + "| ${this.list[i]['durasi']}" + (" " * (7 - durasi)) + "|");
-        n++;
-      }
-    }
-    print("+------+------------------------------------+----------------+-------+------------+--------------------------+--------+");
-
   }
 
   void inputWatchlist(String film){
