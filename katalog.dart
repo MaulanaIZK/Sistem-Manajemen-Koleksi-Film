@@ -346,7 +346,7 @@ class Katalog extends Queue {
     if (isEmpty()) {
       print("Queue Underflow");
     } else {
-      for (int i = front; i < rear - 1; i++) {
+      for (int i = front; i < rear; i++) {
         elements[i] = elements[i + 1];
       }
       elements.removeAt(rear);
