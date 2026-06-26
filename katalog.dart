@@ -352,7 +352,7 @@ class Katalog extends Queue {
       elements.removeAt(rear);
       rear--;
       if (rear == -1) {
-        front = -1;
+        front = 0;
       }
     }
 
